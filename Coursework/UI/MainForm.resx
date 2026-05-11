@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmbSystemType.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>182, 12</value>
+  </data>
+  <data name="cmbSystemType.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>175, 28</value>
+  </data>
+  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+  <data name="cmbSystemType.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cmbSystemType.Name" xml:space="preserve">
+    <value>cmbSystemType</value>
+  </data>
+  <data name="&gt;&gt;cmbSystemType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbSystemType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbSystemType.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>18</value>
+  </data>
+  <data name="nudDimension.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>296, 98</value>
+  </data>
+  <data name="nudDimension.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>61, 27</value>
+  </data>
+  <data name="nudDimension.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;nudDimension.Name" xml:space="preserve">
+    <value>nudDimension</value>
+  </data>
+  <data name="&gt;&gt;nudDimension.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudDimension.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;nudDimension.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>17</value>
+  </data>
+  <data name="dgvCoefficients.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
+    <value>29</value>
+  </data>
+  <data name="dgvCoefficients.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>-2, 197</value>
+  </data>
+  <data name="dgvCoefficients.RowHeadersWidth" type="System.Int32, System.Private.CoreLib">
+    <value>51</value>
+  </data>
+  <data name="dgvCoefficients.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>887, 226</value>
+  </data>
+  <data name="dgvCoefficients.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;dgvCoefficients.Name" xml:space="preserve">
+    <value>dgvCoefficients</value>
+  </data>
+  <data name="&gt;&gt;dgvCoefficients.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvCoefficients.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgvCoefficients.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>16</value>
+  </data>
+  <data name="dgvInitialGuess.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
+    <value>29</value>
+  </data>
+  <data name="dgvInitialGuess.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>-2, 429</value>
+  </data>
+  <data name="dgvInitialGuess.RowHeadersWidth" type="System.Int32, System.Private.CoreLib">
+    <value>51</value>
+  </data>
+  <data name="dgvInitialGuess.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>887, 87</value>
+  </data>
+  <data name="dgvInitialGuess.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dgvInitialGuess.Name" xml:space="preserve">
+    <value>dgvInitialGuess</value>
+  </data>
+  <data name="&gt;&gt;dgvInitialGuess.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvInitialGuess.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgvInitialGuess.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>15</value>
+  </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>705, 157</value>
+  </data>
+  <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>99, 34</value>
+  </data>
+  <data name="btnClear.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>5</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>Спочатку</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
+    <value>btnClear</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnClear.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>14</value>
+  </data>
+  <data name="cmbMethod.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>197, 53</value>
+  </data>
+  <data name="cmbMethod.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>160, 28</value>
+  </data>
+  <data name="cmbMethod.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cmbMethod.Name" xml:space="preserve">
+    <value>cmbMethod</value>
+  </data>
+  <data name="&gt;&gt;cmbMethod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbMethod.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmbMethod.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>13</value>
+  </data>
+  <data name="txtPrecision.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>603, 75</value>
+  </data>
+  <data name="txtPrecision.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>86, 27</value>
+  </data>
+  <data name="txtPrecision.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtPrecision.Name" xml:space="preserve">
+    <value>txtPrecision</value>
+  </data>
+  <data name="&gt;&gt;txtPrecision.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPrecision.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtPrecision.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>12</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>388, 79</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>209, 23</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>8</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Точність (від 1e-1 до 1e-10):</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>11</value>
+  </data>
+  <data name="nudMaxIterations.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>290, 129</value>
+  </data>
+  <data name="nudMaxIterations.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>67, 27</value>
+  </data>
+  <data name="nudMaxIterations.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;nudMaxIterations.Name" xml:space="preserve">
+    <value>nudMaxIterations</value>
+  </data>
+  <data name="&gt;&gt;nudMaxIterations.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudMaxIterations.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;nudMaxIterations.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>10</value>
+  </data>
+  <data name="btnSolve.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>430, 157</value>
+  </data>
+  <data name="btnSolve.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>99, 34</value>
+  </data>
+  <data name="btnSolve.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>10</value>
+  </data>
+  <data name="btnSolve.Text" xml:space="preserve">
+    <value>Розв'язати</value>
+  </data>
+  <data name="&gt;&gt;btnSolve.Name" xml:space="preserve">
+    <value>btnSolve</value>
+  </data>
+  <data name="&gt;&gt;btnSolve.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSolve.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSolve.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>9</value>
+  </data>
+  <data name="rtbOutput.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>-2, 522</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="rtbOutput.ScrollBars" type="System.Windows.Forms.RichTextBoxScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="rtbOutput.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>887, 352</value>
+  </data>
+  <data name="rtbOutput.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>15</value>
+  </data>
+  <data name="rtbOutput.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;rtbOutput.Name" xml:space="preserve">
+    <value>rtbOutput</value>
+  </data>
+  <data name="&gt;&gt;rtbOutput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rtbOutput.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;rtbOutput.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>8</value>
+  </data>
+  <data name="btnSaveToFile.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>535, 157</value>
+  </data>
+  <data name="btnSaveToFile.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>135, 34</value>
+  </data>
+  <data name="btnSaveToFile.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>17</value>
+  </data>
+  <data name="btnSaveToFile.Text" xml:space="preserve">
+    <value>Зберегти у файл</value>
+  </data>
+  <data name="&gt;&gt;btnSaveToFile.Name" xml:space="preserve">
+    <value>btnSaveToFile</value>
+  </data>
+  <data name="&gt;&gt;btnSaveToFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSaveToFile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSaveToFile.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>7</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>19, 15</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>157, 23</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>18</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Оберіть тип системи:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>6</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>78, 55</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>113, 23</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>19</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Оберіть метод:</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>5</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>158, 102</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>132, 23</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>20</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Кількість рівнянь:</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>4</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>48, 131</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>236, 23</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>21</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Максимальна кількість ітерацій:</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="lblSystemFormula.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 12pt</value>
+  </data>
+  <data name="lblSystemFormula.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>393, 15</value>
+  </data>
+  <data name="lblSystemFormula.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>400, 47</value>
+  </data>
+  <data name="lblSystemFormula.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;lblSystemFormula.Name" xml:space="preserve">
+    <value>lblSystemFormula</value>
+  </data>
+  <data name="&gt;&gt;lblSystemFormula.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSystemFormula.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblSystemFormula.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>2</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 12pt</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>19, 166</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>320, 28</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>23</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Введіть коефіцієнти до рівняння:</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="btnShowGraph.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>430, 122</value>
+  </data>
+  <data name="btnShowGraph.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>240, 32</value>
+  </data>
+  <data name="btnShowGraph.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>24</value>
+  </data>
+  <data name="btnShowGraph.Text" xml:space="preserve">
+    <value>Показати на графіку</value>
+  </data>
+  <data name="btnShowGraph.Visible" type="System.Boolean, System.Private.CoreLib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnShowGraph.Name" xml:space="preserve">
+    <value>btnShowGraph</value>
+  </data>
+  <data name="&gt;&gt;btnShowGraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnShowGraph.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnShowGraph.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
+    <value>8, 20</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>881, 866</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
