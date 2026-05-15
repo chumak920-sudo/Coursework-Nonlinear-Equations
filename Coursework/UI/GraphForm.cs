@@ -83,7 +83,7 @@ public class GraphForm : Form
         // Змінюємо шрифт
         using Font legendFont = new Font("Arial", 12, FontStyle.Bold);
 
-        // Ставимо зелену точку ТІЛЬКИ якщо розв'язок знайдено
+        // Ставимо зелену точку тільки якщо розв'язок знайдено
         if (_isSuccess)
         {
             int rootPx = (int)((_rootX - minX) / dx);

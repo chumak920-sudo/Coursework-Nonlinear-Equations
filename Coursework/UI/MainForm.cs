@@ -141,7 +141,7 @@ public partial class MainForm : Form
         }
         
         int maxIter = (int)nudMaxIterations.Value;
-        INonlinearSolver solver = (cmbMethod.SelectedIndex == 0) ? new NewtonSolver() : new SecantSolver();
+        INonlinearSolver solver = cmbMethod.SelectedIndex == 0 ? new NewtonSolver() : new SecantSolver();
 
         var watch = System.Diagnostics.Stopwatch.StartNew(); 
         double[] result = solver.Solve(model, x0, precision, maxIter, out int iters, out string errorMsg);
@@ -305,7 +305,7 @@ public partial class MainForm : Form
             // Перевіряємо, чи була помилка
             bool isSuccess = !rtbOutput.Text.Contains("ЗУПИНКА");
         
-            // ФІКС КАМЕРИ: Якщо успіх - центруємо на корені. Якщо помилка - центруємо на (0; 0)
+            // Якщо успіх - центруємо на корені. Якщо помилка - центруємо на (0; 0)
             double centerX = isSuccess ? _lastResult[0] : 0.0;
             double centerY = isSuccess ? _lastResult[1] : 0.0;
         
