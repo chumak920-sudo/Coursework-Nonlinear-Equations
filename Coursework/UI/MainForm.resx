@@ -60,7 +60,7 @@
   </resheader>
   <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmbSystemType.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>182, 12</value>
+    <value>197, 12</value>
   </data>
   <data name="cmbSystemType.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>175, 28</value>
@@ -79,13 +79,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cmbSystemType.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="nudDimension.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>296, 98</value>
+    <value>305, 98</value>
   </data>
   <data name="nudDimension.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>61, 27</value>
+    <value>67, 27</value>
   </data>
   <data name="nudDimension.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
@@ -100,7 +100,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;nudDimension.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="dgvCoefficients.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
     <value>29</value>
@@ -127,7 +127,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgvCoefficients.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="dgvInitialGuess.ColumnHeadersHeight" type="System.Int32, System.Private.CoreLib">
     <value>29</value>
@@ -154,13 +154,17 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgvInitialGuess.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>15</value>
+    <value>16</value>
+  </data>
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 10.2pt, style=Bold</value>
   </data>
   <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>705, 157</value>
+    <value>732, 157</value>
   </data>
   <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>99, 34</value>
+    <value>107, 34</value>
   </data>
   <data name="btnClear.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>5</value>
@@ -178,10 +182,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnClear.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="cmbMethod.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>197, 53</value>
+    <value>212, 52</value>
   </data>
   <data name="cmbMethod.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>160, 28</value>
@@ -199,10 +203,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cmbMethod.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="txtPrecision.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>603, 75</value>
+    <value>630, 79</value>
   </data>
   <data name="txtPrecision.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>86, 27</value>
@@ -220,19 +224,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPrecision.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>12</value>
+    <value>13</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 10.2pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>388, 79</value>
+    <value>401, 79</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>209, 23</value>
+    <value>223, 27</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>8</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Точність (від 1e-1 до 1e-10):</value>
+    <value>Точність (від 1e-10 до 1e-1):</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -244,10 +251,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="nudMaxIterations.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>290, 129</value>
+    <value>305, 129</value>
   </data>
   <data name="nudMaxIterations.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>67, 27</value>
@@ -265,13 +272,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;nudMaxIterations.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>10</value>
+    <value>11</value>
+  </data>
+  <data name="btnSolve.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 10.2pt, style=Bold</value>
   </data>
   <data name="btnSolve.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>430, 157</value>
   </data>
   <data name="btnSolve.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>99, 34</value>
+    <value>116, 34</value>
   </data>
   <data name="btnSolve.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>10</value>
@@ -289,7 +299,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSolve.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="rtbOutput.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>-2, 522</value>
@@ -317,13 +327,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;rtbOutput.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>8</value>
+    <value>9</value>
+  </data>
+  <data name="btnSaveToFile.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 10.2pt, style=Bold</value>
   </data>
   <data name="btnSaveToFile.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>535, 157</value>
+    <value>552, 157</value>
   </data>
   <data name="btnSaveToFile.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>135, 34</value>
+    <value>164, 34</value>
   </data>
   <data name="btnSaveToFile.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>17</value>
@@ -341,13 +354,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSaveToFile.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>7</value>
+    <value>8</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 10.2pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>19, 15</value>
+    <value>12, 12</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>157, 23</value>
+    <value>179, 28</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>18</value>
@@ -365,13 +381,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>6</value>
+    <value>7</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 10.2pt</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>78, 55</value>
+    <value>80, 52</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>113, 23</value>
+    <value>126, 28</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>19</value>
@@ -389,13 +408,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>5</value>
+    <value>6</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 10.2pt</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>158, 102</value>
+    <value>148, 98</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>132, 23</value>
+    <value>151, 27</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>20</value>
@@ -413,13 +435,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>4</value>
+    <value>5</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 10.2pt</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>48, 131</value>
+    <value>32, 129</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>236, 23</value>
+    <value>267, 27</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>21</value>
@@ -437,14 +462,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>3</value>
+    <value>4</value>
   </data>
-  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
   <data name="lblSystemFormula.Font" type="System.Drawing.Font, System.Drawing.Common">
     <value>Palatino Linotype, 12pt</value>
   </data>
   <data name="lblSystemFormula.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>393, 15</value>
+    <value>393, 25</value>
   </data>
   <data name="lblSystemFormula.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>400, 47</value>
@@ -462,10 +486,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblSystemFormula.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label6.Font" type="System.Drawing.Font, System.Drawing.Common">
-    <value>Palatino Linotype, 12pt</value>
+    <value>Palatino Linotype, 12pt, style=Italic</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>19, 166</value>
@@ -489,13 +513,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="btnShowGraph.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 10.2pt, style=Bold</value>
   </data>
   <data name="btnShowGraph.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>430, 122</value>
+    <value>430, 119</value>
   </data>
   <data name="btnShowGraph.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>240, 32</value>
+    <value>194, 32</value>
   </data>
   <data name="btnShowGraph.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>24</value>
@@ -516,6 +543,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnShowGraph.ZOrder" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="btnLoadFromFile.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Palatino Linotype, 10.2pt, style=Bold</value>
+  </data>
+  <data name="btnLoadFromFile.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>630, 119</value>
+  </data>
+  <data name="btnLoadFromFile.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>209, 32</value>
+  </data>
+  <data name="btnLoadFromFile.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>25</value>
+  </data>
+  <data name="btnLoadFromFile.Text" xml:space="preserve">
+    <value>Завантажити з файлу</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFromFile.Name" xml:space="preserve">
+    <value>btnLoadFromFile</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFromFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFromFile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnLoadFromFile.ZOrder" type="System.Int32, System.Private.CoreLib">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
