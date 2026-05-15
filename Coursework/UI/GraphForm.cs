@@ -12,12 +12,14 @@ public class GraphForm : Form
     private readonly SystemModel _model;
     private readonly double _rootX;
     private readonly double _rootY;
+    private readonly bool _isSuccess;
 
-    public GraphForm(SystemModel model, double rootX, double rootY)
+    public GraphForm(SystemModel model, double rootX, double rootY, bool isSuccess)
     {
         _model = model;
         _rootX = rootX;
         _rootY = rootY;
+        _isSuccess = isSuccess;
 
         Text = "Графік системи рівнянь";
         Size = new Size(600, 600);
@@ -77,16 +79,25 @@ public class GraphForm : Form
             }
         }
         g.DrawImage(bmp, 0, 0);
+        
+        // Змінюємо шрифт
+        using Font legendFont = new Font("Arial", 12, FontStyle.Bold);
 
-        // Ставимо зелену точку там, де програма знайшла розв'язок
-        int rootPx = (int)((_rootX - minX) / dx);
-        int rootPy = (int)((maxY - _rootY) / dy);
-        g.FillEllipse(Brushes.Green, rootPx - 5, rootPy - 5, 10, 10);
+        // Ставимо зелену точку ТІЛЬКИ якщо розв'язок знайдено
+        if (_isSuccess)
+        {
+            int rootPx = (int)((_rootX - minX) / dx);
+            int rootPy = (int)((maxY - _rootY) / dy);
+            g.FillEllipse(Brushes.Green, rootPx - 5, rootPy - 5, 10, 10);
+            g.DrawString($"Результат ({_rootX:F2}; {_rootY:F2})", legendFont, Brushes.Green, 10, 50);
+        }
+        else
+        {
+            g.DrawString("Розв'язок відсутній", legendFont, Brushes.Gray, 10, 50);
+        }
 
         // Легенда
-        using Font legendFont = new Font("Arial", 12, FontStyle.Bold);
         g.DrawString("Рівняння 1", legendFont, Brushes.Red, 10, 10);
         g.DrawString("Рівняння 2", legendFont, Brushes.Blue, 10, 30);
-        g.DrawString($"Результат ({_rootX:F2}; {_rootY:F2})", legendFont, Brushes.Green, 10, 50);
     }
 }
