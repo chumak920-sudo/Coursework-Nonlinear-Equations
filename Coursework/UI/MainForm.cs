@@ -21,7 +21,10 @@ public partial class MainForm : Form
         
         cmbSystemType.SelectedIndexChanged += cmbSystemType_SelectedIndexChanged;
         nudDimension.ValueChanged += NudDimension_ValueChanged;
-
+        
+        dgvCoefficients.CellValueChanged += Dgv_CellValueChanged;
+        dgvInitialGuess.CellValueChanged += Dgv_CellValueChanged;
+        
         cmbSystemType.Items.Clear();
         cmbSystemType.Items.AddRange(["Алгебраїчна", "Тригонометрична", "Показникова"]);
         
@@ -385,5 +388,10 @@ public partial class MainForm : Form
                 }
             }
         }
+    }
+    private void Dgv_CellValueChanged(object? sender, DataGridViewCellEventArgs e)
+    {
+        // Якщо користувач щось змінив у таблиці — ховаємо кнопку графіка
+        btnShowGraph.Visible = false;
     }
 }
