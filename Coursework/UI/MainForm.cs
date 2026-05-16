@@ -59,6 +59,8 @@ public partial class MainForm : Form
 
     private void NudDimension_ValueChanged(object? sender, EventArgs e)
     {
+        btnShowGraph.Visible = false;
+        
         int n = (int)nudDimension.Value;
 
         dgvCoefficients.Columns.Clear();
@@ -201,85 +203,82 @@ public partial class MainForm : Form
     }
 
     private void BtnSaveToFile_Click(object sender, EventArgs e)
-{
-    if (string.IsNullOrWhiteSpace(rtbOutput.Text))
     {
-        MessageBox.Show("Немає даних для збереження!", "Увага", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        return;
-    }
-
-    using (SaveFileDialog sfd = new SaveFileDialog())
-    {
-        sfd.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
-        sfd.Title = "Зберегти результати";
-        sfd.FileName = "Звіт_Курсова.txt";
-
-        if (sfd.ShowDialog() == DialogResult.OK)
+        if (string.IsNullOrWhiteSpace(rtbOutput.Text))
         {
-            try
-            {
-                // Створюємо красиву "шапку" для файлу
-                StringBuilder report = new StringBuilder();
-                report.AppendLine("==================================================");
-                report.AppendLine("        ЗВІТ: РОЗВ'ЯЗАННЯ СИСТЕМИ РІВНЯНЬ         ");
-                report.AppendLine("==================================================");
-                report.AppendLine($"Дата та час: {DateTime.Now}");
-                report.AppendLine($"Тип системи: {cmbSystemType.Text}");
-                report.AppendLine($"Метод:       {cmbMethod.Text}");
-                report.AppendLine($"Розмірність: {nudDimension.Value}");
-                report.AppendLine($"Точність:    {txtPrecision.Text}");
-                report.AppendLine("--------------------------------------------------");
-                report.AppendLine("ВХІДНІ КОЕФІЦІЄНТИ (Матриця системи):");
-                
-                // Друкуємо назви колонок
-                string headerRow = "";
-                for (int c = 0; c < dgvCoefficients.Columns.Count; c++)
-                {
-                    headerRow += dgvCoefficients.Columns[c].HeaderText.PadRight(18);
-                }
-                report.AppendLine(headerRow);
+            MessageBox.Show("Немає даних для збереження!", "Увага", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return;
+        }
 
-                // Друкуємо самі коефіцієнти
-                for (int r = 0; r < dgvCoefficients.Rows.Count; r++)
+        using (SaveFileDialog sfd = new SaveFileDialog())
+        {
+            sfd.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            sfd.Title = "Зберегти результати";
+            sfd.FileName = "Звіт_Курсова.txt";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                try
                 {
-                    string rowData = "";
+                    StringBuilder report = new StringBuilder();
+                    report.AppendLine("==================================================");
+                    report.AppendLine("        ЗВІТ: РОЗВ'ЯЗАННЯ СИСТЕМИ РІВНЯНЬ         ");
+                    report.AppendLine("==================================================");
+                    report.AppendLine($"Дата та час: {DateTime.Now}");
+                    report.AppendLine($"Тип системи: {cmbSystemType.Text}");
+                    report.AppendLine($"Метод:       {cmbMethod.Text}");
+                    report.AppendLine($"Розмірність: {nudDimension.Value}");
+                    report.AppendLine($"Точність:    {txtPrecision.Text}");
+                    report.AppendLine("--------------------------------------------------");
+                    report.AppendLine("ВХІДНІ КОЕФІЦІЄНТИ (Матриця системи):");
+                    
+                    string headerRow = "";
                     for (int c = 0; c < dgvCoefficients.Columns.Count; c++)
                     {
-                        string cellValue = dgvCoefficients.Rows[r].Cells[c].Value?.ToString() ?? "0";
-                        rowData += cellValue.PadRight(18);
+                        headerRow += dgvCoefficients.Columns[c].HeaderText.PadRight(18);
                     }
-                    report.AppendLine(rowData);
-                }
+                    report.AppendLine(headerRow);
 
-                report.AppendLine("--------------------------------------------------");
-                report.AppendLine("ПОЧАТКОВІ НАБЛИЖЕННЯ:");
-                string guessRow = "";
-                for (int c = 0; c < dgvInitialGuess.Columns.Count; c++)
+                    for (int r = 0; r < dgvCoefficients.Rows.Count; r++)
+                    {
+                        string rowData = "";
+                        for (int c = 0; c < dgvCoefficients.Columns.Count; c++)
+                        {
+                            string cellValue = dgvCoefficients.Rows[r].Cells[c].Value?.ToString() ?? "0";
+                            rowData += cellValue.PadRight(18);
+                        }
+                        report.AppendLine(rowData);
+                    }
+
+                    report.AppendLine("--------------------------------------------------");
+                    report.AppendLine("ПОЧАТКОВІ НАБЛИЖЕННЯ:");
+                    string guessRow = "";
+                    for (int c = 0; c < dgvInitialGuess.Columns.Count; c++)
+                    {
+                        string header = dgvInitialGuess.Columns[c].HeaderText;
+                        string val = dgvInitialGuess.Rows[0].Cells[c].Value?.ToString() ?? "0";
+                        guessRow += $"{header}: {val}    ";
+                    }
+                    report.AppendLine(guessRow);
+                    report.AppendLine("==================================================\n");
+
+                    report.Append(rtbOutput.Text);
+
+                    File.WriteAllText(sfd.FileName, report.ToString());
+                    MessageBox.Show("Звіт успішно збережено!", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
                 {
-                    string header = dgvInitialGuess.Columns[c].HeaderText;
-                    string val = dgvInitialGuess.Rows[0].Cells[c].Value?.ToString() ?? "0";
-                    guessRow += $"{header}: {val}    ";
+                    MessageBox.Show($"Сталася помилка при збереженні:\n{ex.Message}", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                report.AppendLine(guessRow);
-                report.AppendLine("==================================================\n");
-
-                // Додаємо результати розрахунків
-                report.Append(rtbOutput.Text);
-
-                // Зберігаємо все у файл
-                File.WriteAllText(sfd.FileName, report.ToString());
-                MessageBox.Show("Звіт успішно збережено!", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Сталася помилка при збереженні:\n{ex.Message}", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
-}
 
     private void cmbSystemType_SelectedIndexChanged(object? sender, EventArgs e)
     {
+        btnShowGraph.Visible = false;
+        
         if (cmbSystemType.SelectedIndex == 0)
         {
             lblSystemFormula.Text = "Вигляд: a1*x² + a2*y² + ... + an*z² = b";
@@ -302,10 +301,8 @@ public partial class MainForm : Form
     {
         if (_lastModel != null && _lastResult != null && _lastResult.Length >= 2)
         {
-            // Перевіряємо, чи була помилка
             bool isSuccess = !rtbOutput.Text.Contains("ЗУПИНКА");
         
-            // Якщо успіх - центруємо на корені. Якщо помилка - центруємо на (0; 0)
             double centerX = isSuccess ? _lastResult[0] : 0.0;
             double centerY = isSuccess ? _lastResult[1] : 0.0;
         
@@ -325,9 +322,10 @@ public partial class MainForm : Form
             {
                 try
                 {
+                    btnShowGraph.Visible = false;
+                    
                     string[] lines = File.ReadAllLines(ofd.FileName);
                     
-                    // Відфільтровуємо порожні рядки
                     List<string> validLines = new List<string>();
                     foreach (string line in lines)
                     {
@@ -335,7 +333,6 @@ public partial class MainForm : Form
                             validLines.Add(line.Trim());
                     }
                     
-                    // N рівнянь + 1 рядок наближень = N + 1 рядків у файлі
                     int detectedN = validLines.Count - 1;
 
                     if (detectedN < 2 || detectedN > 10)
@@ -346,13 +343,10 @@ public partial class MainForm : Form
                         return;
                     }
 
-                    // Змінюємо інтерфейс під знайдений N
                     nudDimension.Value = detectedN; 
 
-                    // Зчитуємо матрицю коефіцієнтів та вільні члени
                     for (int i = 0; i < detectedN; i++)
                     {
-                        // Розбиваємо рядок на числа
                         string[] parts = validLines[i].Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                         
                         if (parts.Length < detectedN + 1)
@@ -366,11 +360,9 @@ public partial class MainForm : Form
                         {
                             dgvCoefficients.Rows[i].Cells[j].Value = parts[j].Replace('.', ',');
                         }
-                        // Останнє число - вільний член
                         dgvCoefficients.Rows[i].Cells[detectedN].Value = parts[detectedN].Replace('.', ',');
                     }
 
-                    // Зчитуємо початкові наближення
                     string[] guessParts = validLines[detectedN].Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                     if (guessParts.Length < detectedN)
                     {

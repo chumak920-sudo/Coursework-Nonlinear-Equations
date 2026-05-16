@@ -204,45 +204,26 @@ partial class MainForm
         PerformLayout();
     }
 
-    private System.Windows.Forms.Button btnLoadFromFile;
-
     private System.Windows.Forms.Button btnShowGraph;
-    
     private System.Windows.Forms.Label label6;
-
     private System.Windows.Forms.Label lblSystemFormula;
-
     private System.Windows.Forms.Label label5;
-
     private System.Windows.Forms.Label label4;
-
     private System.Windows.Forms.Label label3;
-
     private System.Windows.Forms.Label label2;
-
     private System.Windows.Forms.Button btnSaveToFile;
-
     private System.Windows.Forms.RichTextBox rtbOutput;
-
     private System.Windows.Forms.Button btnSolve;
-
     private System.Windows.Forms.NumericUpDown nudMaxIterations;
-
     private System.Windows.Forms.Label label1;
-
     private System.Windows.Forms.TextBox txtPrecision;
-
     private System.Windows.Forms.ComboBox cmbMethod;
-
     private System.Windows.Forms.Button btnClear;
-
     private System.Windows.Forms.DataGridView dgvInitialGuess;
-
     private System.Windows.Forms.DataGridView dgvCoefficients;
-
     private System.Windows.Forms.NumericUpDown nudDimension;
-
     private System.Windows.Forms.ComboBox cmbSystemType;
+    private System.Windows.Forms.Button btnLoadFromFile;
 
     #endregion
 }
