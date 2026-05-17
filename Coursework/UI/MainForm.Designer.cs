@@ -113,7 +113,7 @@ partial class MainForm
         // 
         // txtPrecision
         // 
-        txtPrecision.Location = new System.Drawing.Point(630, 79);
+        txtPrecision.Location = new System.Drawing.Point(656, 80);
         txtPrecision.Name = "txtPrecision";
         txtPrecision.Size = new System.Drawing.Size(86, 27);
         txtPrecision.TabIndex = 7;
@@ -121,7 +121,7 @@ partial class MainForm
         // label1
         // 
         label1.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)204));
-        label1.Location = new System.Drawing.Point(401, 79);
+        label1.Location = new System.Drawing.Point(427, 80);
         label1.Name = "label1";
         label1.Size = new System.Drawing.Size(223, 27);
         label1.TabIndex = 8;
@@ -267,7 +267,7 @@ partial class MainForm
         Controls.Add(dgvCoefficients);
         Controls.Add(nudDimension);
         Controls.Add(cmbSystemType);
-        Text = "MainForm";
+        Text = "Калькулятор систем нелінійних рівнянь";
         ((System.ComponentModel.ISupportInitialize)nudDimension).EndInit();
         ((System.ComponentModel.ISupportInitialize)dgvCoefficients).EndInit();
         ((System.ComponentModel.ISupportInitialize)dgvInitialGuess).EndInit();
