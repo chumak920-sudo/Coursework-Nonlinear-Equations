@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Coursework.Models;
+﻿namespace Coursework.Models;
 
 public class SystemModel
 {

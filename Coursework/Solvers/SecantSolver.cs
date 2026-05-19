@@ -1,5 +1,4 @@
-﻿using System;
-using Coursework.Models;
+﻿using Coursework.Models;
 
 namespace Coursework.Solvers;
 
@@ -44,7 +43,7 @@ public class SecantSolver : INonlinearSolver
             }
 
             // 3. Розв'язуємо СЛАР J * dx = -F
-            double[] dx = SolveGauss(J, F);
+            double[]? dx = SolveGauss(J, F);
             if (dx == null)
             {
                 errorMessage = "Особливий випадок: Матриця січних вироджена.";
@@ -68,7 +67,7 @@ public class SecantSolver : INonlinearSolver
     }
 
     // Копіюємо метод Гауса з Ньютона (для ізольованості класів)
-    private double[] SolveGauss(double[,] A, double[] B)
+    private double[]? SolveGauss(double[,] A, double[] B)
     {
         int n = B.Length;
         double[,] mat = new double[n, n + 1];

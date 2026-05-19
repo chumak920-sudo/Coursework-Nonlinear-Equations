@@ -1,8 +1,5 @@
 ﻿// ReSharper disable LocalizableElement
 // ReSharper disable VirtualMemberCallInConstructor
-
-using System.Drawing;
-using System.Windows.Forms;
 using Coursework.Models;
 
 namespace Coursework.UI;
@@ -99,19 +96,5 @@ public class GraphForm : Form
         // Легенда
         g.DrawString("Рівняння 1", legendFont, Brushes.Red, 10, 10);
         g.DrawString("Рівняння 2", legendFont, Brushes.Blue, 10, 30);
-    }
-
-    /// <summary>
-    /// Required method for Designer support - do not modify
-    /// the contents of this method with the code editor.
-    /// </summary>
-    private void InitializeComponent()
-    {
-        SuspendLayout();
-        // 
-        // GraphForm
-        // 
-        ClientSize = new System.Drawing.Size(928, 744);
-        ResumeLayout(false);
     }
 }

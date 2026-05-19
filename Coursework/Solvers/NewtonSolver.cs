@@ -1,5 +1,4 @@
-﻿using System;
-using Coursework.Models;
+﻿using Coursework.Models;
 
 namespace Coursework.Solvers;
 
@@ -29,7 +28,7 @@ public class NewtonSolver : INonlinearSolver
             }
 
             // 2. Розв'язуємо СЛАР J * dx = -F методом Гаусса
-            double[] dx = SolveGauss(J, F);
+            double[]? dx = SolveGauss(J, F);
             if (dx == null)
             {
                 errorMessage = "Особливий випадок: Матриця Якобі вироджена. Можливо, розв'язків немає, або точка є точкою екстремуму.";
@@ -55,7 +54,7 @@ public class NewtonSolver : INonlinearSolver
     }
 
     // Метод Гауса для розв'язання СЛАР (знаходження вектора приросту dx)
-    private double[] SolveGauss(double[,] A, double[] B)
+    private double[]? SolveGauss(double[,] A, double[] B)
     {
         int n = B.Length;
         double[,] mat = new double[n, n + 1];
