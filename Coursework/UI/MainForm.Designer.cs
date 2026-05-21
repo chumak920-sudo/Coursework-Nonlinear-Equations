@@ -51,6 +51,7 @@ partial class MainForm
         label6 = new System.Windows.Forms.Label();
         btnShowGraph = new System.Windows.Forms.Button();
         btnLoadFromFile = new System.Windows.Forms.Button();
+        btnExit = new System.Windows.Forms.Button();
         ((System.ComponentModel.ISupportInitialize)nudDimension).BeginInit();
         ((System.ComponentModel.ISupportInitialize)dgvCoefficients).BeginInit();
         ((System.ComponentModel.ISupportInitialize)dgvInitialGuess).BeginInit();
@@ -115,7 +116,7 @@ partial class MainForm
         // 
         txtPrecision.Location = new System.Drawing.Point(656, 80);
         txtPrecision.Name = "txtPrecision";
-        txtPrecision.Size = new System.Drawing.Size(86, 27);
+        txtPrecision.Size = new System.Drawing.Size(64, 27);
         txtPrecision.TabIndex = 7;
         // 
         // label1
@@ -242,11 +243,23 @@ partial class MainForm
         btnLoadFromFile.UseVisualStyleBackColor = true;
         btnLoadFromFile.Click += btnLoadFromFile_Click;
         // 
+        // btnExit
+        // 
+        btnExit.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)204));
+        btnExit.Location = new System.Drawing.Point(804, 71);
+        btnExit.Name = "btnExit";
+        btnExit.Size = new System.Drawing.Size(65, 40);
+        btnExit.TabIndex = 26;
+        btnExit.Text = "Вихід";
+        btnExit.UseVisualStyleBackColor = true;
+        btnExit.Click += btnExit_Click;
+        // 
         // MainForm
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(881, 866);
+        Controls.Add(btnExit);
         Controls.Add(btnLoadFromFile);
         Controls.Add(btnShowGraph);
         Controls.Add(label6);
@@ -275,6 +288,8 @@ partial class MainForm
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.Button btnExit;
 
     private System.Windows.Forms.Button btnShowGraph;
     private System.Windows.Forms.Label label6;

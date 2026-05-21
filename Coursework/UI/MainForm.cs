@@ -143,35 +143,38 @@ public partial class MainForm : Form
         int maxIter = (int)nudMaxIterations.Value;
         INonlinearSolver solver = cmbMethod.SelectedIndex == 0 ? new NewtonSolver() : new SecantSolver();
 
-        var watch = System.Diagnostics.Stopwatch.StartNew(); 
-        double[] result = solver.Solve(model, x0, precision, maxIter, out int iters, out string errorMsg);
-        watch.Stop();
-
-        // Виведення результатів
-        if (!string.IsNullOrEmpty(errorMsg))
-        {
-            rtbOutput.SelectionColor = Color.Red;
-            rtbOutput.AppendText($"ЗУПИНКА АЛГОРИТМУ:\n{errorMsg}\n");
-            
-            if (errorMsg.Contains("зациклювання"))
-            {
-                rtbOutput.AppendText("-> Ймовірні причини:\n   1) Ця система не має дійсних розв'язків.\n   2) Дуже невдале початкове наближення.\n\n");
-            }
-        }
-        else
-        {
-            rtbOutput.SelectionColor = Color.Green;
-            rtbOutput.AppendText("РОЗВ'ЯЗОК УСПІШНО ЗНАЙДЕНО!\n\n");
-        }
-
-        rtbOutput.SelectionColor = Color.Black;
-        for (int i = 0; i < n; i++)
-        {
-            string vName = GetVarName(i, n);
-            rtbOutput.AppendText($"{vName} = {result[i]:F6}\n");
-        }
-
-        rtbOutput.AppendText($"\nКількість ітерацій: {iters}\n");
+        var watch = System.Diagnostics.Stopwatch.StartNew();  
+        // Додався параметр out int opsCount
+        double[] result = solver.Solve(model, x0, precision, maxIter, out int iters, out int opsCount, out string errorMsg); 
+        watch.Stop(); 
+ 
+        // Виведення результатів 
+        if (!string.IsNullOrEmpty(errorMsg)) 
+        { 
+            rtbOutput.SelectionColor = Color.Red; 
+            rtbOutput.AppendText($"ЗУПИНКА АЛГОРИТМУ:\n{errorMsg}\n"); 
+             
+            if (errorMsg.Contains("зациклювання")) 
+            { 
+                rtbOutput.AppendText("-> Ймовірні причини:\n   1) Ця система не має дійсних розв'язків.\n   2) Дуже невдале початкове наближення.\n\n"); 
+            } 
+        } 
+        else 
+        { 
+            rtbOutput.SelectionColor = Color.Green; 
+            rtbOutput.AppendText("РОЗВ'ЯЗОК УСПІШНО ЗНАЙДЕНО!\n\n"); 
+        } 
+ 
+        rtbOutput.SelectionColor = Color.Black; 
+        for (int i = 0; i < n; i++) 
+        { 
+            string vName = GetVarName(i, n); 
+            rtbOutput.AppendText($"{vName} = {result[i]:F6}\n"); 
+        } 
+ 
+        rtbOutput.AppendText($"\nКількість ітерацій алгоритму: {iters}\n"); 
+        // Ось виведення операцій
+        rtbOutput.AppendText($"Практична складність (кількість операцій): {opsCount}\n"); 
         rtbOutput.AppendText($"Витрачений час: {watch.ElapsedMilliseconds} мс\n\n");
 
         if (string.IsNullOrEmpty(errorMsg))
@@ -388,5 +391,14 @@ public partial class MainForm : Form
     {
         // Якщо користувач щось змінив у таблиці — ховаємо кнопку графіка
         btnShowGraph.Visible = false;
+    }
+
+    private void btnExit_Click(object sender, EventArgs e)
+    {
+        var result = MessageBox.Show("Ви впевнені, що хочете вийти?", "Підтвердження", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        if (result == DialogResult.Yes)
+        {
+            Application.Exit();
+        }
     }
 }
