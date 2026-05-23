@@ -174,7 +174,7 @@ public partial class MainForm : Form
  
         rtbOutput.AppendText($"\nКількість ітерацій алгоритму: {iters}\n"); 
         // Ось виведення операцій
-        rtbOutput.AppendText($"Практична складність (кількість операцій): {opsCount}\n"); 
+        rtbOutput.AppendText($"Кількість операцій: {opsCount}\n"); 
         rtbOutput.AppendText($"Витрачений час: {watch.ElapsedMilliseconds} мс\n\n");
 
         if (string.IsNullOrEmpty(errorMsg))
